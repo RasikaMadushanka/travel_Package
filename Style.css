@@ -139,7 +139,7 @@
   border: 3px solid #000;
   background-color: #C9C1B1;
   border-radius: 10px;
- width: 80%;               /* ⬅ decrease width (try 70%, 60% as needed) */
+ width: 80%;             
   margin: 0 auto;   min-height: 300px;
   display: flex;
   align-items: start;
@@ -158,14 +158,38 @@
 }
 
 
-/* Hover effect (optional) */
+
 .overview:hover {
   transform: scale(1.02);
 }
 
-/* Responsive heights */
+
 @media (max-width: 991px) {
   .overview {
-    height: auto;  /* let content decide height on small screens */
+    height: auto;  
   }
 }
+.whychooseus {
+  background-color: #F8F6F0;
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  padding: 30px;
+}
+
+.whychooseus:hover {
+  transform: scale(1.01);
+}
+
+.choose-card {
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.choose-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
