@@ -1,21 +1,26 @@
-.navgap{
-    gap: 5rem;
+.navgap {
+    gap: 3rem;
 
 }
-.custom_navbar {
-    max-width: 900px;       /* adjust width as you like (e.g., 70%, 800px, etc.) */
-    margin: 20px auto;      /* centers it horizontally */
-    border-radius: 20px;    /* optional – gives soft corners */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* optional for a nice floating look */
-  }
-  .nav_color{
-    background-color: #1A0A6C;
-  }
- 
-   
 
-  .nav_text {
+.custom_navbar {
+    max-width: 900px;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav_color {
+    background-color: #1A0A6C;
+}
+
+
+
+.nav_text {
     text-decoration: none;
     color: #FDD76E;
-  }
+}
 
+.f_radius {
+    border-radius: 10px;
+}
