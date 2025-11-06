@@ -252,21 +252,30 @@
   font-size: 18px;
   letter-spacing: 2px;
 }
- .aboutus-wrapper {
-  position: relative;
-  width: 100%;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 10px;
+.aboutus-wrapper {
+    position: relative;        /* important */
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.camp-overlay {
+    position: absolute;        /* allows text to appear on image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* centers the text */
+    z-index: 2;                /* place text above image */
+    color: #fff;
 }
 
 .about-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
+
 /* About Image Styling */
 .about-image-wrapper {
     border-radius: 15px;
