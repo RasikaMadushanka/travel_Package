@@ -252,5 +252,19 @@
   font-size: 18px;
   letter-spacing: 2px;
 }
+ .aboutus-wrapper {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+}
 
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 
