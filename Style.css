@@ -127,6 +127,11 @@
       opacity: 0;
     }
   }
+  .mapsize{
+    max-width: 1000px;
+    max-height: 200px;
+
+  }
 
 
   .image-wrapper .responsive-text {
@@ -356,3 +361,18 @@
     background-color: #0056d2;
     transform: scale(1.05);
   }
+  /* tour packges data styles contact form */
+  .alert-msg {
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+}
+.alert-success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+.alert-danger {
+  background-color: #f8d7da;
+  color: #842029;
+}
