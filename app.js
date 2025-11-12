@@ -1,8 +1,5 @@
 AOS.init();
-
-// ============================
 // Tour Packages Data
-// ============================
 const tourPackages = [
   {
     id: "10day",
@@ -74,14 +71,10 @@ Return home with unforgettable memories.
     location: "Mirissa / Galle / Sigiriya / Dambulla / Kandy / Nuwara Eliya"
   }
 ];
-
-// ============================
 // Generate Tour Cards
-// ============================
 function displayTourCards() {
   const container = document.getElementById("tourCards");
   if (!container) return;
-
   container.innerHTML = tourPackages.map(item => `
     <div class="col-12 col-md-6 col-lg-4 p-2" data-aos="fade-up">
       <div class="card h-100 shadow-lg border-0">
@@ -95,20 +88,15 @@ function displayTourCards() {
     </div>
   `).join("");
 }
-
-// ============================
 // Discover Button Functionality
-// ============================
 function discoverPlace(id) {
   const place = tourPackages.find(d => d.id === id);
   if (!place) { alert("Details not found"); return; }
   localStorage.setItem("selectedPlace", JSON.stringify(place));
   window.location.href = "details.html";
 }
-
-// ============================
 // Display Details on details.html
-// ============================
+
 function displayPlaceDetails() {
   const data = JSON.parse(localStorage.getItem("selectedPlace"));
   const container = document.getElementById("placeDetails");
@@ -118,21 +106,17 @@ function displayPlaceDetails() {
     container.innerHTML = `<p class="text-danger text-center">No place data found.</p>`;
     return;
   }
-
   container.innerHTML = `
   <div class="card shadow-lg mb-4" data-aos="fade-up">
     <img src="${data.images[0]}" class="card-img-top rounded" alt="${data.name}">
     <div class="card-body">
       <h2 class="fw-bold mb-3 text-center">${data.name}</h2>
-
       <div class="mb-3">
         <p><strong>Province:</strong> ${data.province}</p>
         <p><strong>District:</strong> ${data.district}</p>
         <p><strong>Locations:</strong> ${data.location}</p>
       </div>
-
       <hr>
-
       <div class="tour-itinerary">
         ${data.description
           .split("\n\n")
@@ -156,10 +140,7 @@ function displayPlaceDetails() {
   </div>
 `;
 }
-
-// ============================
 // Run Functions on Page Load
-// ============================
 window.addEventListener("DOMContentLoaded", () => {
   displayTourCards();
   displayPlaceDetails();
@@ -189,11 +170,9 @@ document.getElementById("contactForm").addEventListener("submit", function (even
     showAlert("⚠️ Please fill out all required fields!", "danger");
     return;
   }
-
-  // ✅ Your WhatsApp number (no + or spaces)
+//add whatsap number
   const phoneNumber = "94740409486";
-
-  // Format WhatsApp message
+// Format WhatsApp message
   const whatsappMessage =
     `🌍 *New Tour Booking Request*
 ------------------------------------
@@ -242,23 +221,6 @@ function showAlert(message, type) {
   // Remove after 4 seconds
   setTimeout(() => alertBox.remove(), 4000);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Initialize EmailJS
 emailjs.init("KZ1g9DJxg-CfhzacT"); // Replace with your EmailJS public key
 
@@ -286,21 +248,11 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     alert("Please enter a valid email address.");
     return;
   }
-
-  // Contact number validation (digits only, optional length check)
-  const contactPattern = /^\d+$/;
-  if (!contactPattern.test(contact)) {
-    alert("Please enter a valid contact number (digits only).");
-    return;
-  }
-
   // Add current time for {{time}} variable in template
   const now = new Date();
   const time = now.toLocaleString();
-
   // Prepare form data
   const formData = { name, email, country, nationality, contact, message, time };
-
   // Send data using EmailJS
   emailjs.send("service_81ibozh", "template_n5uvvs8", formData)
     .then(() => {

@@ -4,15 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="Style.css">
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-lg nav_color custom_navbar  fixed-top  ">
         <div class="container-fluid ">
-            <a class="navbar-brand fw-bold" href="#" style="color:#e57373; font-size:1.5rem;">
+            <a class="navbar-brand fw-bold" href="#" style="color:#8B572A; font-size:1.5rem;">
                 GOKO Tours
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -20,7 +24,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse " id="navbarNavDropdown">
-                <ul class="navbar-nav navgap ">
+                <ul class="navbar-nav navgap  ">
                     <li class="nav-item">
                         <a class="nav_text " aria-current="page" href="index.html">Home</a>
                     </li>
@@ -28,8 +32,7 @@
                         <a class="nav_text " aria-current="page" href="aboutus.html">About US</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav_text " aria-current="page" href="aboutus.html">Tour</a>
-
+                        <a class="nav_text" href="tour.html">Tour</a>
                     </li>
                     <!-- <li class="nav-item">
                         <a class="nav_text" href="#">Budget</a>
@@ -43,58 +46,54 @@
                     <!-- <li class="nav-item">
                         <a class="nav_text" href="#">Blog</a>
                     </li> -->
-
                 </ul>
             </div>
         </div>
     </nav>
-
+    <!-- Top Banner -->
     <div class="container-fluid py-5 position-relative">
 
-        <!-- Top Banner -->
-        <div class="aboutus-wrapper mb-4">
-            <img src="assets/image/img11.jpg" class="about-img">
-            <div class="camp-overlay text-center text-dark">
-                <h2>Our Gallery</h2>
+        <div class="aboutus-wrapper position-relative mb-4">
+            <img src="assets/image/img11.jpg" class="img-fluid w-100 about-img" alt="Gallery Banner">
+            <div
+                class="camp-overlay d-flex flex-column justify-content-center align-items-center text-center text-dark">
+                <h2 class="fw-bold">Our Gallery</h2>
                 <p>Experience the beauty of nature</p>
             </div>
         </div>
     </div>
     <!-- ---------Story section------------ -->
-    <div class="container px-3 my-4">
-        <div class="row g-4">
-            <div class="col-12 col-lg-6">
-                <div class="card h-100 shadow-lg">
+    <div class="container px-3  " data-aos="zoom-out-up">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 p-2">
+                <div class="card h-75 shadow-lg">
                     <img src="assets/image/tour1.JPG" alt="" class="card-img-top">
+
                 </div>
             </div>
-            <div class="col-12 col-lg-6">
-                <div class="row g-4">
-                    <!-- Small Card 1 -->
-                    <div class="col-6">
-                        <div class="card h-100 shadow-lg">
-                            <img src="assets/image/nature3.jpg" alt="" class="card-img-top">
-
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card h-100 shadow-lg">
-                            <img src="assets/image/nature4.jpg" alt="" class="card-img-top">
-
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card h-100 shadow-lg">
-                            <img src="assets/image/nature8.jpg" alt="" class="card-img-top">
-
-                        </div>
-                    </div>
-                    <div class="col-6">
-                        <div class="card h-100 shadow-lg">
-                            <img src="assets/image/nature5.JPG" alt="" class="card-img-top">
-
-                        </div>
-                    </div>
+            <div class="col-12 col-md-6 col-lg-4 p-2">
+                <div class="card h-75 shadow-lg">
+                    <img src="assets/image/nature12.jpg" alt="" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 p-2">
+                <div class="card h-75 shadow-lg">
+                    <img src="assets/image/nature3.jpg" alt="" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 p-2">
+                <div class="card h-75 shadow-lg">
+                    <img src="assets/image/nature4.jpg" alt="" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 p-2">
+                <div class="card h-75 shadow-lg">
+                    <img src="assets/image/nature8.jpg" alt="" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 p-2">
+                <div class="card h-75 shadow-lg">
+                    <img src="assets/image/nature5.jpg" alt="" class="card-img-top">
                 </div>
             </div>
         </div>
@@ -113,40 +112,33 @@
     <div class="container px-3  " data-aos="zoom-out-up">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 p-2">
-                <div class="card  shadow-lg">
+                <div class="card h-75 shadow-lg">
                     <img src="assets/image/temple.jpg" alt="" class="card-img-top">
-
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 p-2">
-                <div class="card h-100 shadow-lg">
-                    <img src="assets/image/temple2.jpg" alt="" class="card-img-top">
-
-                </div>
-
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 p-2">
-                <div class="card h-100 shadow-lg">
+                <div class="card h-75 shadow-lg">
                     <img src="assets/image/church.jpg" alt="" class="card-img-top">
                 </div>
-
             </div>
             <div class="col-12 col-md-6 col-lg-4 p-2">
-                <div class="card h-100 shadow-lg">
+                <div class="card h-75 shadow-lg">
+                    <img src="assets/image/room.jpg" alt="" class="card-img-top">
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 p-2">
+                <div class="card h-75 shadow-lg">
                     <img src="assets/image/sport.JPG" alt="" class="card-img-top">
                 </div>
-
             </div>
             <div class="col-12 col-md-6 col-lg-4 p-2">
-                <div class="card  shadow-lg">
+                <div class="card h-75 shadow-lg">
                     <img src="assets/image/img7.jpg" alt="" class="card-img-top">
-
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 p-2">
-                <div class="card  shadow-lg">
+                <div class="card h-75 shadow-lg">
                     <img src="assets/image/nature7.jpg" alt="" class="card-img-top">
-
                 </div>
             </div>
         </div>
@@ -156,9 +148,7 @@
         <video autoplay muted loop playsinline class="bg-video">
             <source src="assets/video/VID-20251105-WA0003.mp4" type="video/mp4">
         </video>
-
         <div class="video-overlay d-flex align-items-center justify-content-center flex-column text-center">
-
         </div>
     </section>
     <!-- ---------------another image----------- -->
@@ -167,38 +157,31 @@
             <div class="col-12 col-md-6 col-lg-4 p-2">
                 <div class="card h-75 shadow-lg">
                     <img src="assets/image/lunch6.jpg" alt="" class="card-img-top">
-
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 p-2">
                 <div class="card h-75 shadow-lg">
                     <img src="assets/image/img12.jpg" alt="" class="card-img-top">
-
                 </div>
-
             </div>
             <div class="col-12 col-md-6 col-lg-4 p-2">
                 <div class="card h-75 shadow-lg">
                     <img src="assets/image/night1.JPG" alt="" class="card-img-top">
                 </div>
-
             </div>
             <div class="col-12 col-md-6 col-lg-4 p-2">
                 <div class="card h-75 shadow-lg">
                     <img src="assets/image/lunch2.jpg" alt="" class="card-img-top">
                 </div>
-
             </div>
             <div class="col-12 col-md-6 col-lg-4 p-2">
                 <div class="card h-75 shadow-lg">
                     <img src="assets/image/lunch4.JPG" alt="" class="card-img-top">
-
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 p-2">
                 <div class="card h-75 shadow-lg">
                     <img src="assets/image/img20.jpg" alt="" class="card-img-top">
-
                 </div>
             </div>
         </div>
@@ -208,9 +191,7 @@
         <video autoplay muted loop playsinline class="bg-video">
             <source src="assets/video/VID-20251105-WA0004.mp4" type="video/mp4">
         </video>
-
         <div class="video-overlay d-flex align-items-center justify-content-center flex-column text-center">
-
         </div>
     </section>
     <!-- ---------Story section------------ -->
@@ -227,25 +208,21 @@
                     <div class="col-6">
                         <div class="card h-100 shadow-lg">
                             <img src="assets/image/nature1.JPG" alt="" class="card-img-top">
-
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="card h-100 shadow-lg">
                             <img src="assets/image/nature2.JPG" alt="" class="card-img-top">
-
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="card h-100 shadow-lg">
                             <img src="assets/image/img8.jpg" alt="" class="card-img-top">
-
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="card h-100 shadow-lg">
                             <img src="assets/image/nature9.jpg" alt="" class="card-img-top">
-
                         </div>
                     </div>
                 </div>
@@ -261,16 +238,13 @@
         <div class="video-overlay d-flex align-items-center justify-content-center flex-column text-center">
         </div>
     </section>
-
-
-
     <!-- ----------footer----------------- -->
     <footer class="nav_color text-light pt-5 pb-3 mt-5  f_radius" data-aos="fade-right" data-aos-offset="300"
         data-aos-easing="ease-in-sine">
         <div class="container">
             <div class="row gy-4">
                 <div class="col-md-4">
-                    <h5 class="fw-bold ">GOKO Travels SriLanka</h5>
+                    <h5 class="fw-bold ">GOKO Tours SriLanka</h5>
                     <p class="small nav_text h-75 w-50">
                         Explore the island’s hidden gems, breathtaking landscapes, and vibrant culture. We offer
                         carefully curated tour packages designed to give you unforgettable adventures and authentic
@@ -280,21 +254,19 @@
                 <div class="col-md-2">
                     <h6 class=" fw-bold ">Quick Links</h6>
                     <ul class="list-unstyled small ">
-                        <li><a href="#" class="text-decoration-none  nav_text">Home</a></li>
-                        <li><a href="#" class="text-decoration-none  nav_text">About US</a></li>
-                        <li><a href="#" class="text-decoration-none  nav_text">Tours</a></li>
-                        <li><a href="#" class="text-decoration-none  nav_text">Budget</a></li>
-                        <li><a href="#" class="text-decoration-none  nav_text">Gallery</a></li>
-                        <li><a href="#" class="text-decoration-none  nav_text">Contact US</a></li>
-                        <li><a href="#" class="text-decoration-none  nav_text">Blog</a></li>
-
-
+                        <li><a href="index.html" class="text-decoration-none  nav_text">Home</a></li>
+                        <li><a href="aboutus.html" class="text-decoration-none  nav_text">About US</a></li>
+                        <li><a href="tour.html" class="text-decoration-none  nav_text">Tours</a></li>
+                        <!-- <li><a href="#" class="text-decoration-none  nav_text">Budget</a></li> -->
+                        <li><a href="Gallery.html" class="text-decoration-none  nav_text">Gallery</a></li>
+                        <li><a href="contactus.html" class="text-decoration-none  nav_text">Contact US</a></li>
+                        <!-- <li><a href="#" class="text-decoration-none  nav_text">Blog</a></li> -->
                     </ul>
                 </div>
                 <div class="col-md-2">
                     <h6 class="fw-bold ">Services</h6>
                     <ul class="list-unstyled small">
-                        <li><a href="#" class="text-decoration-none nav_text ">Family Tours</a></li>
+                        <li><a href="#" class="text-decoration-none nav_text ">10 day package</a></li>
                         <li><a href="#" class="text-decoration-none nav_text">Couple Tours </a></li>
                         <li><a href="#" class="text-decoration-none nav_text">Group Tours</a></li>
                     </ul>
@@ -306,9 +278,10 @@
                         <button class="btn btn-primary btn-sm">Subscribe</button>
                     </form>
 
-                    <p class="small mb-1 nav_text"><i class="fa fa-map-marker-alt me-2 "></i> Colombo, Sri Lanka</p>
+                    <p class="small mb-1 nav_text"><i class="fa fa-map-marker-alt me-2 "></i>183,Meegahawatta,Delgoda
+                    </p>
                     <p class="small mb-1 nav_text"><i class="fa fa-envelope me-2"></i> info@tourismlanka.com</p>
-                    <p class="small mb-3 nav_text"><i class="fa fa-phone me-2"></i> +94 77 123 4567</p>
+                    <p class="small mb-3 nav_text"><i class="fa fa-phone me-2"></i> +94 770132263</p>
                     <div>
                         <a href="#" class="btn btn-outline-light btn-sm rounded-circle me-2"><i
                                 class="fab fa-facebook-f"></i></a>
@@ -323,12 +296,14 @@
             </div>
             <hr class="border-secondary mt-4">
             <div class="text-center small">
-                &copy; 2025 Tourism Lanka. All Rights Reserved.
+                &copy; 25/26Tourism Lanka. All Rights Reserved.Develop by Rasika Madushanka
             </div>
         </div>
     </footer>
-    <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <script src="app.js"></script>
 </body>
 
