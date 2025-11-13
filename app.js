@@ -1,4 +1,9 @@
 AOS.init();
+ window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.body.classList.add("loaded");
+    }, 6500); // 10 seconds
+  });
 // Tour Packages Data
 const tourPackages = [
   {
@@ -37,38 +42,51 @@ Take a scenic train ride to Kandy. Visit the Temple of the Tooth & stroll around
 ✈️ <b>Day 10: Departure</b>  
 Return home with memories of Sri Lanka’s diverse beauty and warm hospitality.
     `,
-    province: "Central Province",
-    district: "Matale District",
+    // province: "Central Province",
+    // district: "Matale District",
     location: "Galle / Mirissa / Trincomalee / Arugam Bay / Sigiriya / Dambulla / Ella / Kandy"
   },
   {
-    id: "7day",
-    name: "🌄 7-Day Cultural & Adventure Tour",
+    id: "15 days",
+    name: "🌄 15-Day Cultural & Adventure Tour",
     images: [
-      "assets/image/img7.jpg",
-      "assets/image/img8.jpg",
-      "assets/image/img9.jpg",
-       "assets/image/img8.jpg",
-      "assets/image/img9.jpg"
+      "assets/image/15day5.jpg",
+      "assets/image/15day3.jpg",
+      "assets/image/15day1.jpg",
+      "assets/image/15day2.jpg",
+      "assets/image/15day4.jpg"
     ],
-    description: `
-Explore Sri Lanka’s cultural treasures and natural beauty in 7 days.
+    description: `🌊 Days 1 – 3: Unawatuna / Galle
+Start your journey on the southern coast. Explore Galle Fort, relax at Polhena Beach, and visit Parrot Rock and Coconut Hill. Go whale watching or snorkel among coral gardens.
+🏖 Beach Relaxation | 🐋 Whale Watching | 🏰 Galle Fort | 3 Nights Stay
 
-🏖️ <b>Days 1–2: South Coast</b>  
-Relax at Mirissa & Galle, enjoy beaches, surfing & whale watching.
+🦁 Days 4 – 5: Kataragama / Yala National Park
+Travel inland for an unforgettable wildlife safari in Yala National Park. Spot elephants, leopards, and exotic birds while enjoying a full-day safari with lunch.
+🚙 Jeep Safari | 🐆 Wildlife Experience | 2 Nights Stay
 
-🏰 <b>Days 3–4: Sigiriya & Dambulla</b>  
-Climb the Lion Rock & visit ancient cave temples.
+🏄 Days 6 – 8: Arugam Bay
+Head to Sri Lanka’s surf capital! Relax on Crocodile River Beach or catch the perfect wave. Ideal for beach lovers and surfers alike.
+🌊 Surfing | 🐊 River Views | ☀️ 3 Nights Stay
 
-🌿 <b>Days 5–6: Kandy & Nuwara Eliya</b>  
-Temple of the Tooth, scenic train ride, tea plantations & waterfalls.
+🌿 Days 9 – 11: Ella
+Discover the misty hills of Ella—hike to Ella Rock, Little Adam’s Peak, and the iconic Nine Arches Bridge. Don’t miss the Secret Waterfall.
+🚶‍♀️ Hiking | 🌄 Scenic Views | 🌺 3 Nights Stay
 
-🚗 <b>Day 7: Departure</b>  
-Return home with unforgettable memories.
-    `,
-    province: "Central Province",
-    district: "Matale District",
-    location: "Mirissa / Galle / Sigiriya / Dambulla / Kandy / Nuwara Eliya"
+🚂 Day 12: Train to Nuwara Eliya
+Enjoy one of the world’s most beautiful train rides through lush tea plantations and mountain tunnels.
+🍃 Tea Country Views | 🚆 Scenic Journey | 1 Night Stay
+
+🏯 Days 13 – 14: Sigiriya / Cultural Triangle
+Explore the ancient cities and sacred sites—Sigiriya Lion Rock, Pidurangala, Dambulla Cave Temple, and the ruins of Anuradhapura & Polonnaruwa.
+🪔 Cultural Heritage | 🏯 Ancient Temples | 2 Nights Stay
+
+🐘 Day 15: Negombo / Pinnawala Elephant Orphanage
+Conclude your trip with a visit to Pinnawala to see rescued elephants, then relax by the Negombo beach before departure.
+🐘 Elephant Encounter | 🏖 Farewell Beach | 1 Night Stay
+`,
+    // province: "Central Province",
+    // district: "Matale District",
+    location: "Galle / Kataragama / Arugambay / Ella / Sigiriya / Nuwara Eliya"
   }
 ];
 // Generate Tour Cards
@@ -112,15 +130,14 @@ function displayPlaceDetails() {
     <div class="card-body">
       <h2 class="fw-bold mb-3 text-center">${data.name}</h2>
       <div class="mb-3">
-        <p><strong>Province:</strong> ${data.province}</p>
-        <p><strong>District:</strong> ${data.district}</p>
+
         <p><strong>Locations:</strong> ${data.location}</p>
       </div>
       <hr>
       <div class="tour-itinerary">
         ${data.description
-          .split("\n\n")
-          .map(section => `
+      .split("\n\n")
+      .map(section => `
             <div class="mb-4">
               <p class="mb-1">${section}</p>
             </div>
@@ -145,7 +162,8 @@ window.addEventListener("DOMContentLoaded", () => {
   displayTourCards();
   displayPlaceDetails();
 });
-
+//  <p><strong>Province:</strong> ${data.province}</p>
+//  <p><strong>District:</strong> ${data.district}</p>
 
 //send message whatsapp tour packges details
 
@@ -170,9 +188,9 @@ document.getElementById("contactForm").addEventListener("submit", function (even
     showAlert("⚠️ Please fill out all required fields!", "danger");
     return;
   }
-//add whatsap number
+  //add whatsap number
   const phoneNumber = "94740409486";
-// Format WhatsApp message
+  // Format WhatsApp message
   const whatsappMessage =
     `🌍 *New Tour Booking Request*
 ------------------------------------
