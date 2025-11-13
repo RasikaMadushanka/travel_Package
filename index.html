@@ -11,8 +11,9 @@
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="Style.css">
 </head>
+
 <body>
-    <div id="preloader">
+  <div id="preloader">
     <img src="assets/image/GOKO4.png" alt="GOKO Tours Logo" class="preloader-logo">
   </div>
   <nav class="navbar navbar-expand-lg nav_color custom_navbar  fixed-top  ">
@@ -34,6 +35,9 @@
           </li>
           <li class="nav-item">
             <a class="nav_text" href="tour.html">Tour</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav_text" href="golf.html">Sport</a>
           </li>
           <!-- <li class="nav-item">
                         <a class="nav_text" href="#">Budget</a>
@@ -74,27 +78,26 @@
       <img src="assets/image/img18.jpg" class="img-fluid w-100">
       <img src="assets/image/img19.jpg" class="img-fluid w-100">
       <img src="assets/image/img20.jpg" class="img-fluid w-100">
-      
+
       <!-- add text-->
       <div class="position-absolute top-50 start-50 translate-middle text-center text-white responsive-text">
-        
+
         <h1>Welcome to the GOKO Tours </h1>
         <p>Experience the beauty of nature</p>
         <br>
       </div>
     </div>
-     <img src="assets/image/GOKO4.png" 
-       alt="GOKO Tours Logo" 
-       style="position:absolute; bottom:20px; left:20px; width:300px; height:auto; z-index:100;">
+    <img src="assets/image/GOKO4.png" alt="GOKO Tours Logo"
+      style="position:absolute; bottom:20px; left:20px; width:300px; height:auto; z-index:100;">
   </div>
   <!-- ----------add overview--------- -->
   <div class="overview text-dark pt-5 pb-3 mt-5 f_radius" data-aos="fade-right" data-aos-offset="300"
     data-aos-easing="ease-in-sine">
     <div class="container">
       <div class="row align-items-center">
-         <div class="text-center mb-4">
-        <img src="assets/image/GOKO4.png" alt="Company Logo" class="img-fluid logo-about" style="max-width: 150px;">
-      </div>
+        <div class="text-center mb-4">
+          <img src="assets/image/GOKO4.png" alt="Company Logo" class="img-fluid logo-about" style="max-width: 150px;">
+        </div>
         <!-- Text on the left -->
         <div class="col-lg-6 col-md-12">
           <h3 class="fw-bold mb-3">Overview</h3>
@@ -109,6 +112,7 @@
               tour packages, we promise unforgettable experiences filled with adventure, comfort, and
               cultural discovery.
             </p>
+            <br>
           </div>
         </div>
         <!-- Image on the right -->
@@ -136,7 +140,7 @@
             <div class="more" style="display:none;">
               <p class="card-text"></p>
             </div>
-            <a href="tour.html"><button class="btn btn-primary">View Morer</button></a>
+            <a href="tour.html"><button class="btn btn-primary">View More</button></a>
           </div>
         </div>
       </div>
@@ -180,6 +184,26 @@
     <div class="video-overlay d-flex align-items-center justify-content-center flex-column text-center">
     </div>
   </section>
+  <!-- -------golf section------------- -->
+  <div class="container-fluid py-5 position-relative golfclass">
+    <div class="aboutus-wrapper position-relative mb-4">
+      <img src="assets/image/golf7.jpg" class="img-fluid w-100 about-img" alt="Golf Banner">
+
+      <!-- Overlay Text & Button -->
+      <div class="camp-overlay d-flex flex-column justify-content-center align-items-center text-center text-light">
+        <h2 class="fw-bold">Enjoy an Amazing Experience</h2>
+        <p>As we introduce our golf sport</p>
+
+        <!-- View More Button -->
+        <a href="golf.html" class="btn btn-light mt-3 px-4 py-2 fw-semibold shadow">
+          View More
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
   <!-- ----------review section------- -->
   <div class="review-section text-dark py-5 mt-5" data-aos="fade-up" data-aos-easing="ease-in-out">
     <div class="container">
@@ -271,6 +295,8 @@
             <li><a href="index.html" class="text-decoration-none  nav_text">Home</a></li>
             <li><a href="aboutus.html" class="text-decoration-none  nav_text">About US</a></li>
             <li><a href="tour.html" class="text-decoration-none  nav_text">Tours</a></li>
+            <li><a href="golf.html" class="text-decoration-none  nav_text">Golf</a></li>
+
             <!-- <li><a href="#" class="text-decoration-none  nav_text">Budget</a></li> -->
             <li><a href="Gallery.html" class="text-decoration-none  nav_text">Gallery</a></li>
             <li><a href="contactus.html" class="text-decoration-none  nav_text">Contact US</a></li>
@@ -282,9 +308,9 @@
         <div class="col-md-2">
           <h6 class="fw-bold ">Services</h6>
           <ul class="list-unstyled small">
-            <li><a href="#" class="text-decoration-none nav_text ">10 day package</a></li>
-            <li><a href="#" class="text-decoration-none nav_text">Couple Tours </a></li>
-            <li><a href="#" class="text-decoration-none nav_text">Group Tours</a></li>
+            <li><a href="tour.html" class="text-decoration-none nav_text ">10 day package</a></li>
+            <li><a href="tour.html" class="text-decoration-none nav_text">15 day package </a></li>
+            <li><a href="tour.html" class="text-decoration-none nav_text">Group Tours</a></li>
           </ul>
         </div>
         <div class="col-md-4">
@@ -315,7 +341,6 @@
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-
   <script src="app.js"></script>
 </body>
 
