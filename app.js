@@ -1,9 +1,63 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const golfForm = document.getElementById("golfForm");
+    if (golfForm) {
+        golfForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Stop page reload
+
+            const name = document.getElementById("golfName").value.trim();
+            const email = document.getElementById("golfEmail").value.trim();
+            const contact = document.getElementById("golfContact").value.trim();
+            const date = document.getElementById("golfDate").value;
+            const caddie = document.getElementById("golfCaddie").value;
+            const notes = document.getElementById("golfMessage").value.trim();
+
+            // Format date nicely
+            const formattedDate = new Date(date).toLocaleDateString("en-GB", {
+                day: "numeric",
+                month: "short",
+                year: "numeric"
+            });
+
+            // Build WhatsApp message
+            let message = `🏌️‍♂️ Golf Booking Request\n\n`;
+            message += `Full Name: ${name}\n`;
+            message += `Email: ${email}\n`;
+            message += `Contact: ${contact}\n`;
+            message += `Preferred Date: ${formattedDate}\n`;
+            message += `Caddie Service: ${caddie}\n`;
+            if(notes) message += `Additional Notes: ${notes}\n`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappNumber = "94740409486";
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // Open WhatsApp
+            window.open(whatsappURL, "_blank");
+
+            // Clear the form fields
+            golfForm.reset();
+        });
+    }
+});
+
+
 AOS.init();
  window.addEventListener("load", () => {
     setTimeout(() => {
       document.body.classList.add("loaded");
-    }, 6500); // 10 seconds
+    }, 2000); // 4 seconds
   });
+  // only on home page
+if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.body.classList.add("loaded");
+    }, 6000);
+  });
+} else {
+  document.body.classList.add("loaded"); 
+}
+
 // Tour Packages Data
 const tourPackages = [
   {
@@ -13,8 +67,8 @@ const tourPackages = [
       "assets/image/img4.jpg",
       "assets/image/img6.jpg",
       "assets/image/img10.jpg",
-      "assets/image/img6.jpg",
-      "assets/image/img10.jpg"
+      "assets/image/room.jpg",
+      "assets/image/img8.jpg"
     ],
     description: `
 Embark on an unforgettable 10-day journey across Sri Lanka, blending golden beaches, cultural wonders, lush mountains, and thrilling adventures.
@@ -166,43 +220,37 @@ window.addEventListener("DOMContentLoaded", () => {
 //  <p><strong>District:</strong> ${data.district}</p>
 
 //send message whatsapp tour packges details
-
-
 document.getElementById("contactForm").addEventListener("submit", function (event) {
   event.preventDefault(); // stop page reload
 
-  // Get all field values
-  const name = document.getElementById("yourname").value.trim();
-  const email = document.getElementById("youremail").value.trim();
-  const packageSelected = document.getElementById("tourpackage").value.trim();
-  const startDate = document.getElementById("tourstart_date").value.trim();
-  const pickup = document.getElementById("tourpickup").value.trim();
-  const nationality = document.getElementById("tournationality").value.trim();
-  const contact = document.getElementById("tourcontact").value.trim();
-  const adults = document.getElementById("touradults").value.trim();
-  const children = document.getElementById("tourchildren").value.trim();
-  const message = document.getElementById("tourmessage").value.trim();
+  // Get all field values (IDs must match your HTML)
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const country = document.getElementById("country").value.trim();
+  const nationality = document.getElementById("nationality").value.trim();
+  const contact = document.getElementById("contact").value.trim();
+  const packageSelected = document.getElementById("tour").value.trim();
+  const message = document.getElementById("message").value.trim();
 
   // Validate fields
-  if (!name || !email || !packageSelected || !startDate || !pickup || !nationality || !contact || !adults || !children || !message) {
+  if (!name || !email || !country || !nationality || !contact || !packageSelected || !message) {
     showAlert("⚠️ Please fill out all required fields!", "danger");
     return;
   }
-  //add whatsap number
+
+  // WhatsApp number
   const phoneNumber = "94740409486";
+
   // Format WhatsApp message
-  const whatsappMessage =
-    `🌍 *New Tour Booking Request*
+  const whatsappMessage = 
+`🌍 *New Tour Booking Request*
 ------------------------------------
 👤 *Name:* ${name}
 📧 *Email:* ${email}
-📦 *Package:* ${packageSelected}
-📅 *Start Date:* ${startDate}
-📍 *Pickup Location:* ${pickup}
-🌎 *Nationality:* ${nationality}
+🌎 *Country:* ${country}
+🏳️ *Nationality:* ${nationality}
 📞 *Contact:* ${contact}
-🧍 *Adults:* ${adults}
-👶 *Children:* ${children}
+📦 *Package:* ${packageSelected}
 💬 *Message:* ${message}
 ------------------------------------
 Sent from the tour website.`;
@@ -214,7 +262,7 @@ Sent from the tour website.`;
   // Show success message
   showAlert("✅ Message ready! Redirecting to WhatsApp...", "success");
 
-  // Wait before opening WhatsApp
+  // Redirect to WhatsApp after short delay
   setTimeout(() => {
     window.open(whatsappURL, "_blank");
     document.getElementById("contactForm").reset();
@@ -223,22 +271,21 @@ Sent from the tour website.`;
 
 // Function to show alert messages
 function showAlert(message, type) {
-  // Remove any existing alert
   const oldAlert = document.querySelector(".alert-msg");
   if (oldAlert) oldAlert.remove();
 
-  // Create alert box
   const alertBox = document.createElement("div");
   alertBox.className = `alert-msg alert alert-${type} text-center fw-semibold`;
   alertBox.textContent = message;
 
-  // Insert alert above form
   const form = document.getElementById("contactForm");
   form.parentNode.insertBefore(alertBox, form);
 
-  // Remove after 4 seconds
   setTimeout(() => alertBox.remove(), 4000);
 }
+
+  
+
 // Initialize EmailJS
 emailjs.init("KZ1g9DJxg-CfhzacT"); // Replace with your EmailJS public key
 
@@ -283,3 +330,34 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     });
 });
 
+document.getElementById("golfForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Stop the form from submitting normally
+
+    // Get form values
+    const name = document.getElementById("golfName").value.trim();
+    const email = document.getElementById("golfEmail").value.trim();
+    const contact = document.getElementById("golfContact").value.trim();
+    const date = document.getElementById("golfDate").value;
+    const caddie = document.getElementById("golfCaddie").value;
+    const notes = document.getElementById("golfMessage").value.trim();
+
+    // Create WhatsApp message
+    let whatsappMessage = `🏌️‍♂️ Golf Booking Request\n\n`;
+    whatsappMessage += `Full Name: ${name}\n`;
+    whatsappMessage += `Email: ${email}\n`;
+    whatsappMessage += `Contact: ${contact}\n`;
+    whatsappMessage += `Preferred Date: ${date}\n`;
+    whatsappMessage += `Caddie Service: ${caddie}\n`;
+    if(notes) {
+        whatsappMessage += `Additional Notes: ${notes}\n`;
+    }
+
+    // Encode message
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+
+    // WhatsApp link (replace with your number)
+    const whatsappURL = `https://wa.me/94740409486?text=${encodedMessage}`;
+
+    // Open WhatsApp
+    window.open(whatsappURL, "_blank");
+});
