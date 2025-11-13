@@ -1,4 +1,9 @@
 AOS.init();
+ window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.body.classList.add("loaded");
+    }, 6500); // 10 seconds
+  });
 // Tour Packages Data
 const tourPackages = [
   {
