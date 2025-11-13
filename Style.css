@@ -481,4 +481,12 @@
   background-color: #f8d7da;
   color: #842029;
 }
+/*tour card size same*/
+.card-img-top {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover; 
+  border-radius: 10px 10px 0 0; 
+}
+
 
