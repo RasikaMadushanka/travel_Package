@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if(notes) message += `Additional Notes: ${notes}\n`;
 
             const encodedMessage = encodeURIComponent(message);
-            const whatsappNumber = "94740409486";
+            const whatsappNumber = "94770132263";
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
             // Open WhatsApp
@@ -239,7 +239,7 @@ document.getElementById("contactForm").addEventListener("submit", function (even
   }
 
   // WhatsApp number
-  const phoneNumber = "94740409486";
+  const phoneNumber = "94770132263";
 
   // Format WhatsApp message
   const whatsappMessage = 
