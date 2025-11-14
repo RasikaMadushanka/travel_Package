@@ -356,7 +356,7 @@ document.getElementById("golfForm").addEventListener("submit", function(event) {
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
     // WhatsApp link (replace with your number)
-    const whatsappURL = `https://wa.me/94740409486?text=${encodedMessage}`;
+    const whatsappURL = `https://wa.me/94770132263?text=${encodedMessage}`;
 
     // Open WhatsApp
     window.open(whatsappURL, "_blank");
