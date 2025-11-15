@@ -287,7 +287,7 @@ function showAlert(message, type) {
   
 
 // Initialize EmailJS
-emailjs.init("KZ1g9DJxg-CfhzacT"); // Replace with your EmailJS public key
+emailjs.init("fzue2eKgVMc8T_lfe"); // Replace with your EmailJS public key
 
 // Form submission listener
 document.getElementById("contactForm").addEventListener("submit", function (e) {
@@ -319,7 +319,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   // Prepare form data
   const formData = { name, email, country, nationality, contact, message, time };
   // Send data using EmailJS
-  emailjs.send("service_81ibozh", "template_n5uvvs8", formData)
+  emailjs.send("service_nrqdhv8", "template_f44jb8i", formData)
     .then(() => {
       alert("Message sent successfully!");
       document.getElementById("contactForm").reset();
