@@ -282,6 +282,7 @@ function showAlert(message, type) {
   form.parentNode.insertBefore(alertBox, form);
 
   setTimeout(() => alertBox.remove(), 4000);
+
 }
 
   
