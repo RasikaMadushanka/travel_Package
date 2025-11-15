@@ -204,6 +204,12 @@
     max-height: 200px;
 
   }
+  .btn:hover {
+  background-color: #1aa545 !important;
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
+
 
 
   .image-wrapper .responsive-text {
