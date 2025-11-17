@@ -75,11 +75,11 @@ Embark on an unforgettable 10-day journey across Sri Lanka, blending golden beac
 
 🌊 <b>Days 1–2: Galle / Mirissa</b>  
 Relax on Polhena Beach, try surfing, snorkeling, or whale watching. Visit Coconut Hill & Parrot Rock.  
-🏄‍♂️ Surf | 🐋 Whale Watching | 🌅 Beach Sunset | 🏖️ 2 Nights Stay
+🏄‍♂️ Surfing | 🐋 Whale Watching | 🌅 Beach Sunset | 🏖️ 2 Nights Stay
 
 🌴 <b>Days 3–4: Trincomalee / Arugam Bay</b>  
 Discover pristine beaches and world-class surf spots. Perfect for sunbathing or catching waves.  
-🌊 Surfing | 🐚 Beach Relaxation | 🛶 2 Nights Stay
+🌊 Surfing | 🐚 Relaxing at beach | 🛶 2 Nights Stay
 
 🏰 <b>Days 5–6: Sigiriya / Dambulla</b>  
 Climb Sigiriya Lion Rock, explore Pidurangala Rock & Dambulla cave temples. Immerse in Sri Lanka’s cultural triangle.  
@@ -112,7 +112,7 @@ Return home with memories of Sri Lanka’s diverse beauty and warm hospitality.
     ],
     description: `🌊 Days 1 – 3: Unawatuna / Galle
 Start your journey on the southern coast. Explore Galle Fort, relax at Polhena Beach, and visit Parrot Rock and Coconut Hill. Go whale watching or snorkel among coral gardens.
-🏖 Beach Relaxation | 🐋 Whale Watching | 🏰 Galle Fort | 3 Nights Stay
+🏖 Relaxing at beach | 🐋 Whale Watching | 🏰 Galle Fort | 3 Nights Stay
 
 🦁 Days 4 – 5: Kataragama / Yala National Park
 Travel inland for an unforgettable wildlife safari in Yala National Park. Spot elephants, leopards, and exotic birds while enjoying a full-day safari with lunch.
@@ -219,21 +219,26 @@ window.addEventListener("DOMContentLoaded", () => {
 //  <p><strong>Province:</strong> ${data.province}</p>
 //  <p><strong>District:</strong> ${data.district}</p>
 
-//send message whatsapp tour packges details
+
+//send message whatsapp tour packages details
+//send message whatsapp tour packages details
 document.getElementById("contactForm").addEventListener("submit", function (event) {
-  event.preventDefault(); // stop page reload
+  event.preventDefault();
 
-  // Get all field values (IDs must match your HTML)
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const country = document.getElementById("country").value.trim();
-  const nationality = document.getElementById("nationality").value.trim();
-  const contact = document.getElementById("contact").value.trim();
-  const packageSelected = document.getElementById("tour").value.trim();
-  const message = document.getElementById("message").value.trim();
+  // Get all field values (IDs updated to match form)
+  const name = document.getElementById("yourname").value.trim();
+  const email = document.getElementById("youremail").value.trim();
+  const packageSelected = document.getElementById("tourpackage").value.trim();
+  const startDate = document.getElementById("tourstart_date").value.trim();
+  const pickup = document.getElementById("tourpickup").value.trim();
+  const nationality = document.getElementById("tournationality").value.trim(); // optional
+  const contact = document.getElementById("tourcontact").value.trim();
+  const adults = document.getElementById("touradults").value.trim();
+  const children = document.getElementById("tourchildren").value.trim();
+  const message = document.getElementById("tourmessage").value.trim();
 
-  // Validate fields
-  if (!name || !email || !country || !nationality || !contact || !packageSelected || !message) {
+  // Validate fields (nationality removed)
+  if (!name || !email || !packageSelected || !startDate || !pickup || !contact || !adults || children === "" || !message) {
     showAlert("⚠️ Please fill out all required fields!", "danger");
     return;
   }
@@ -241,28 +246,27 @@ document.getElementById("contactForm").addEventListener("submit", function (even
   // WhatsApp number
   const phoneNumber = "94770132263";
 
-  // Format WhatsApp message
+  // Format WhatsApp message (Nationality optional)
   const whatsappMessage = 
 `🌍 *New Tour Booking Request*
 ------------------------------------
 👤 *Name:* ${name}
 📧 *Email:* ${email}
-🌎 *Country:* ${country}
-🏳️ *Nationality:* ${nationality}
-📞 *Contact:* ${contact}
 📦 *Package:* ${packageSelected}
+📅 *Start Date:* ${startDate}
+📍 *Pickup Location:* ${pickup}
+${nationality ? `🏳️ *Nationality:* ${nationality}\n` : ""}📞 *Contact:* ${contact}
+🧑 *Adults:* ${adults}
+🧒 *Children:* ${children}
 💬 *Message:* ${message}
 ------------------------------------
 Sent from the tour website.`;
 
-  // Encode and open WhatsApp
   const encodedMessage = encodeURIComponent(whatsappMessage);
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-  // Show success message
   showAlert("✅ Message ready! Redirecting to WhatsApp...", "success");
 
-  // Redirect to WhatsApp after short delay
   setTimeout(() => {
     window.open(whatsappURL, "_blank");
     document.getElementById("contactForm").reset();
@@ -282,11 +286,9 @@ function showAlert(message, type) {
   form.parentNode.insertBefore(alertBox, form);
 
   setTimeout(() => alertBox.remove(), 4000);
-
 }
 
   
-
 // Initialize EmailJS
 emailjs.init("fzue2eKgVMc8T_lfe"); // Replace with your EmailJS public key
 
@@ -298,13 +300,13 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const country = document.getElementById("country").value.trim();
-  const nationality = document.getElementById("nationality").value.trim();
+  const nationality = document.getElementById("nationality").value.trim(); // Optional
   const contact = document.getElementById("contact").value.trim();
   const message = document.getElementById("message").value.trim();
 
-  // Validation
-  if (!name || !email || !country || !nationality || !contact || !message) {
-    alert("Please fill in all fields.");
+  // Validation (Nationality removed)
+  if (!name || !email || !country || !contact || !message) {
+    alert("Please fill in all required fields.");
     return;
   }
 
@@ -314,11 +316,14 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     alert("Please enter a valid email address.");
     return;
   }
-  // Add current time for {{time}} variable in template
+
+  // Add current time
   const now = new Date();
   const time = now.toLocaleString();
+
   // Prepare form data
   const formData = { name, email, country, nationality, contact, message, time };
+
   // Send data using EmailJS
   emailjs.send("service_nrqdhv8", "template_f44jb8i", formData)
     .then(() => {
@@ -330,6 +335,7 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
       console.error("EmailJS Error:", error);
     });
 });
+
 
 document.getElementById("golfForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Stop the form from submitting normally
