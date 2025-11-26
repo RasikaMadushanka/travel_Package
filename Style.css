@@ -4,11 +4,30 @@
 }
 
 .custom_navbar {
-    max-width: 800px;
+    max-width: 900px;
     margin: 30px auto;
     border-radius: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* .custom_navbar {
+  background: rgba(47, 99, 100, 0.4);  transparent version of your nav color 
+  backdrop-filter: blur(6px);
+  transition: 0.3s ease-in-out;
+  padding: 12px 20px;
+}
+
+.custom_navbar.scrolled {
+  background: #2F6364;  solid when scrolling 
+  padding: 8px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+}
+
+
+.navbar-toggler-icon {
+  filter: invert(1);
+} */
+
 
 .nav_color {
     background-color:#2F6364;
@@ -185,13 +204,19 @@
     max-height: 200px;
 
   }
-
+  .btn:hover {
+  background-color: #1aa545 !important;
+  transform: scale(1.05);
+  transition: 0.3s ease;
+}
 
   .image-wrapper .responsive-text {
     position: relative;
     z-index: 2;
     /* text stays on top */
   }
+
+
 .overview {
   color: #000;
   border: 3px solid #000;
@@ -438,16 +463,6 @@
   margin: 0 auto;
 }
 
-.contatctIconText{
-  display: flex;
-  align-items: start;
-  gap: 10px;
-}
-.contatctIconText .line{
-   height: 2px;
-    width: 40px;  
-    background-color: #000;
-}
  .tour-contact-section .form-control {
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -793,5 +808,87 @@ body.loaded #preloader {
     transform: translateY(0);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+/* ===== 🌍 Reach Us + Map Section ===== */
+.reachus-section {
+  background: linear-gradient(135deg, #e8f4f5, #ffffff);
+  border: 1px solid #d7e7e8;
+  border-radius: 22px;
+}
 
+/* Logo styling */
+.reachus-logo {
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.15));
+}
+
+/* Reach Us Section Styling */
+.reachus-section {
+  background: #f8faf9;
+  border-radius: 20px;
+}
+
+/* Contact Item Box */
+.reachus-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border: 2px solid #2f6364;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Icon */
+.reachus-item img {
+  width: 32px;
+  flex-shrink: 0;
+}
+
+/* Text Link */
+.reachus-item p a {
+  text-decoration: none;
+  color: #2f6364;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+/* Hover Effect */
+.reachus-item:hover {
+  background: #2f6364;
+  border-color: #2f6364;
+  transform: translateY(-3px);
+}
+
+.reachus-item:hover p a {
+  color: #ffffff;
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+  .reachus-item {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .reachus-item img {
+    width: 28px;
+  }
+}
+
+/* Map radius fix */
+.reachus-map iframe {
+  border-radius: 12px;
+}
+
+
+/* ===== Responsive tweaks ===== */
+@media (max-width: 500px) {
+  .reachus-item {
+    padding: 10px 14px;
+  }
+  .reachus-item p {
+    font-size: 14px;
+  }
+}
 
