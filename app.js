@@ -141,7 +141,8 @@ Conclude your trip with a visit to Pinnawala to see rescued elephants, then rela
     // province: "Central Province",
     // district: "Matale District",
     location: "Galle / Kataragama / Arugambay / Ella / Sigiriya / Nuwara Eliya"
-  }
+  },
+  
 ];
 // Generate Tour Cards
 function displayTourCards() {
