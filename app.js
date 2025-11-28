@@ -1,53 +1,53 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const golfForm = document.getElementById("golfForm");
-    if (golfForm) {
-        golfForm.addEventListener("submit", function(event) {
-            event.preventDefault(); // Stop page reload
+document.addEventListener("DOMContentLoaded", function () {
+  const golfForm = document.getElementById("golfForm");
+  if (golfForm) {
+    golfForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // Stop page reload
 
-            const name = document.getElementById("golfName").value.trim();
-            const email = document.getElementById("golfEmail").value.trim();
-            const contact = document.getElementById("golfContact").value.trim();
-            const date = document.getElementById("golfDate").value;
-            const caddie = document.getElementById("golfCaddie").value;
-            const notes = document.getElementById("golfMessage").value.trim();
+      const name = document.getElementById("golfName").value.trim();
+      const email = document.getElementById("golfEmail").value.trim();
+      const contact = document.getElementById("golfContact").value.trim();
+      const date = document.getElementById("golfDate").value;
+      const caddie = document.getElementById("golfCaddie").value;
+      const notes = document.getElementById("golfMessage").value.trim();
 
-            // Format date nicely
-            const formattedDate = new Date(date).toLocaleDateString("en-GB", {
-                day: "numeric",
-                month: "short",
-                year: "numeric"
-            });
+      // Format date nicely
+      const formattedDate = new Date(date).toLocaleDateString("en-GB", {
+        day: "numeric",
+        month: "short",
+        year: "numeric"
+      });
 
-            // Build WhatsApp message
-            let message = `🏌️‍♂️ Golf Booking Request\n\n`;
-            message += `Full Name: ${name}\n`;
-            message += `Email: ${email}\n`;
-            message += `Contact: ${contact}\n`;
-            message += `Preferred Date: ${formattedDate}\n`;
-            message += `Caddie Service: ${caddie}\n`;
-            if(notes) message += `Additional Notes: ${notes}\n`;
+      // Build WhatsApp message
+      let message = `🏌️‍♂️ Golf Booking Request\n\n`;
+      message += `Full Name: ${name}\n`;
+      message += `Email: ${email}\n`;
+      message += `Contact: ${contact}\n`;
+      message += `Preferred Date: ${formattedDate}\n`;
+      message += `Caddie Service: ${caddie}\n`;
+      if (notes) message += `Additional Notes: ${notes}\n`;
 
-            const encodedMessage = encodeURIComponent(message);
-            const whatsappNumber = "94770132263";
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappNumber = "94770132263";
+      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
-            // Open WhatsApp
-            window.open(whatsappURL, "_blank");
+      // Open WhatsApp
+      window.open(whatsappURL, "_blank");
 
-            // Clear the form fields
-            golfForm.reset();
-        });
-    }
+      // Clear the form fields
+      golfForm.reset();
+    });
+  }
 });
 
 
 AOS.init();
- window.addEventListener("load", () => {
-    setTimeout(() => {
-      document.body.classList.add("loaded");
-    }, 2000); // 4 seconds
-  });
-  // only on home page
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.body.classList.add("loaded");
+  }, 2000); // 4 seconds
+});
+// only on home page
 if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/") {
   window.addEventListener("load", () => {
     setTimeout(() => {
@@ -55,7 +55,7 @@ if (window.location.pathname.endsWith("index.html") || window.location.pathname 
     }, 6000);
   });
 } else {
-  document.body.classList.add("loaded"); 
+  document.body.classList.add("loaded");
 }
 
 // Tour Packages Data
@@ -142,7 +142,103 @@ Conclude your trip with a visit to Pinnawala to see rescued elephants, then rela
     // district: "Matale District",
     location: "Galle / Kataragama / Arugambay / Ella / Sigiriya / Nuwara Eliya"
   },
-  
+  {
+    id: "15day",
+    name: "🏝️ 15-Day Sri Lanka Adventure(2nd)",
+    images: [
+      "assets/image/img4.jpg",
+      "assets/image/img6.jpg",
+      "assets/image/img10.jpg",
+      "assets/image/room.jpg",
+      "assets/image/img8.jpg"
+    ],
+    description: `
+<h2>✨ <strong>15-Day Magical Sri Lanka Journey</strong> – Adventure Awaits!</h2>
+
+<p>
+Embark on an unforgettable <strong>15-day escape</strong> across Sri Lanka — a paradise of 
+<b>sun-kissed beaches</b>, <b>wild jungles</b>, <b>misty mountains</b>, and <b>ancient kingdoms</b>.  
+Every day is filled with breathtaking discoveries. 🌏✨
+</p>
+
+<br>
+
+<!-- Day 1–3 -->
+<h3>🌴 <strong>Days 1–3: Unawatuna & Galle</strong> — Beaches, Sunsets & Ocean Magic</h3>
+<p>
+• Explore the historic <b>Galle Fort</b> 🏰 <br>
+• Go on a thrilling <b>whale-watching</b> cruise 🐋 <br>
+• Snorkel at the colorful <b>Coral Garden</b> 🐠<br>
+• Relax at <b>Polhena Beach</b> 🌊<br>
+• Capture sunset views from <b>Parrot Rock</b> 🌅 <br>
+</p>
+
+<br>
+
+<!-- Day 4–5 -->
+<h3>🦁 <strong>Days 4–5: Galle → Kataragama & Yala</strong> — Wild Encounters</h3>
+<p>
+• Visit the sacred city of <b>Kataragama</b> 🛕<br>
+• Experience a full-day safari at <b>Yala National Park</b> 🐆🐘<br>
+• Spot leopards, elephants, crocodiles & rare birds 🦅<br>
+• Enjoy lunch in the heart of the wilderness 🍃🍽️<br>
+</p>
+
+<br>
+
+<h3>🌊 <strong>Days 6–7: Arugam Bay</strong> — Surf, Chill & Explore</h3>
+<p>
+• Discover Sri Lanka’s surf paradise 🏄‍♂️🌊<br>
+• Relax on pristine golden beaches 🏖️<br>
+• Take a boat ride along the <b>Crocodile River</b> 🐊🌿<br>
+• Enjoy peaceful evenings with ocean breezes 🌤️<br>
+</p>
+
+<br>
+
+<!-- Day 8–10 -->
+<h3>⛰️ <strong>Days 8–10: Ella</strong> — Mountains, Mist & Adventure</h3>
+<p>
+• Hike to the iconic <b>Ella Rock</b> 🥾⛰️<br>
+• Watch trains glide across the <b>Nine Arch Bridge</b> 🚂🌉<br>
+• Conquer <b>Little Adam’s Peak</b> 🌄<br>
+• Discover the hidden <b>Secret Waterfall</b> 💦🌿<br>
+</p>
+
+<br>
+
+<h3>🚆 <strong>Day 11: Ella → Nuwara Eliya</strong> — The World-Famous Train Ride</h3>
+<p>
+• Board the iconic <b>Ella–Nanu Oya train</b> 🚆<br>
+• Pass tea fields, misty hills & waterfalls 🍃🌧️<br>
+• Arrive in the cool highlands of <b>Nuwara Eliya</b> ❄️🌲<br>
+</p>
+
+<br>
+
+<h3>🏞️ <strong>Days 12–14: Nuwara Eliya → Sigiriya</strong> — Culture, History & Nature</h3>
+<p>
+• Tour a scenic <b>tea factory</b> 🍃☕<br>
+• Visit ancient <b>cave temples</b> 🛕✨<br>
+• Climb the majestic <b>Sigiriya Lion Rock</b> 🦁🪨<br>
+• Enjoy sunrise from <b>Pidurangala</b> 🌄<br>
+• Explore historic cities — <b>Anuradhapura</b> & <b>Polonnaruwa</b> 🏛️<br>
+</p>
+
+<br>
+
+<h3>🐘 <strong>Day 15: Sigiriya → Negombo</strong> — Gentle Giants & Farewell</h3>
+<p>
+• Visit the <b>Pinnawala Elephant Orphanage</b> 🐘❤️<br>
+• Relax in the coastal town of <b>Negombo</b> 🌊🌴<br>
+• End your journey with warm tropical memories ✨<br>
+</p> `,
+    // province: "Central Province",
+    // district: "Matale District",
+    location: "Unawatuna / Galle / Kataragama / Yala  / Ella / Nuwaraeliya / Sigiriya / Negambo"
+  }
+
+
 ];
 // Generate Tour Cards
 function displayTourCards() {
@@ -248,8 +344,8 @@ document.getElementById("contactForm").addEventListener("submit", function (even
   const phoneNumber = "94770132263";
 
   // Format WhatsApp message (Nationality optional)
-  const whatsappMessage = 
-`🌍 *New Tour Booking Request*
+  const whatsappMessage =
+    `🌍 *New Tour Booking Request*
 ------------------------------------
 👤 *Name:* ${name}
 📧 *Email:* ${email}
@@ -289,7 +385,7 @@ function showAlert(message, type) {
   setTimeout(() => alertBox.remove(), 4000);
 }
 
-  
+
 // Initialize EmailJS
 emailjs.init("fzue2eKgVMc8T_lfe"); // Replace with your EmailJS public key
 
@@ -338,34 +434,34 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
 });
 
 
-document.getElementById("golfForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Stop the form from submitting normally
+document.getElementById("golfForm").addEventListener("submit", function (event) {
+  event.preventDefault(); // Stop the form from submitting normally
 
-    // Get form values
-    const name = document.getElementById("golfName").value.trim();
-    const email = document.getElementById("golfEmail").value.trim();
-    const contact = document.getElementById("golfContact").value.trim();
-    const date = document.getElementById("golfDate").value;
-    const caddie = document.getElementById("golfCaddie").value;
-    const notes = document.getElementById("golfMessage").value.trim();
+  // Get form values
+  const name = document.getElementById("golfName").value.trim();
+  const email = document.getElementById("golfEmail").value.trim();
+  const contact = document.getElementById("golfContact").value.trim();
+  const date = document.getElementById("golfDate").value;
+  const caddie = document.getElementById("golfCaddie").value;
+  const notes = document.getElementById("golfMessage").value.trim();
 
-    // Create WhatsApp message
-    let whatsappMessage = `🏌️‍♂️ Golf Booking Request\n\n`;
-    whatsappMessage += `Full Name: ${name}\n`;
-    whatsappMessage += `Email: ${email}\n`;
-    whatsappMessage += `Contact: ${contact}\n`;
-    whatsappMessage += `Preferred Date: ${date}\n`;
-    whatsappMessage += `Caddie Service: ${caddie}\n`;
-    if(notes) {
-        whatsappMessage += `Additional Notes: ${notes}\n`;
-    }
+  // Create WhatsApp message
+  let whatsappMessage = `🏌️‍♂️ Golf Booking Request\n\n`;
+  whatsappMessage += `Full Name: ${name}\n`;
+  whatsappMessage += `Email: ${email}\n`;
+  whatsappMessage += `Contact: ${contact}\n`;
+  whatsappMessage += `Preferred Date: ${date}\n`;
+  whatsappMessage += `Caddie Service: ${caddie}\n`;
+  if (notes) {
+    whatsappMessage += `Additional Notes: ${notes}\n`;
+  }
 
-    // Encode message
-    const encodedMessage = encodeURIComponent(whatsappMessage);
+  // Encode message
+  const encodedMessage = encodeURIComponent(whatsappMessage);
 
-    // WhatsApp link (replace with your number)
-    const whatsappURL = `https://wa.me/94770132263?text=${encodedMessage}`;
+  // WhatsApp link (replace with your number)
+  const whatsappURL = `https://wa.me/94770132263?text=${encodedMessage}`;
 
-    // Open WhatsApp
-    window.open(whatsappURL, "_blank");
+  // Open WhatsApp
+  window.open(whatsappURL, "_blank");
 });
