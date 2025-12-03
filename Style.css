@@ -1196,4 +1196,125 @@ body.loaded #preloader {
   font-size: 1.05rem;
   color: #333;
 }
+/* make transport page */
+.t-card:hover {
+  transform: translateY(-8px);
+  transition: 0.4s ease-in-out;
+}
+
+.t-img-wrap {
+  overflow: hidden;
+}
+
+.t-img-wrap img {
+  transition: transform 0.5s ease;
+}
+
+.t-card:hover .t-img-wrap img {
+  transform: scale(1.1);
+}
+
+.t-tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.t-btn {
+  transition: 0.3s;
+}
+
+.t-btn:hover {
+  opacity: 0.85;
+}
+ /* transport about  */
+.transport-creative-wave {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #c5f5d5, #7fd29c);
+}
+
+/* SVG Wave */
+.wave-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.wave-bg svg {
+  display: block;
+  width: 100%;
+  height: 150px;
+}
+
+/* Container above wave */
+.transport-creative-wave .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Titles */
+.creative-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #0c3d2d;
+  letter-spacing: 1px;
+}
+
+.creative-sub {
+  font-size: 1.15rem;
+  color: #14573e;
+  margin-top: 10px;
+}
+
+/* Overview Box */
+.creative-overview {
+  background: rgba(255,255,255,0.95);
+  padding: 35px;
+  border-radius: 22px;
+  max-width: 900px;
+  margin-bottom: 50px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  line-height: 1.9;
+  color: #2b4a3a;
+  backdrop-filter: blur(10px);
+}
+
+/* Feature Cards */
+.feature-card {
+  background: rgba(255,255,255,0.95);
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.feature-card h4 {
+  font-size: 1.25rem;
+  color: #0f4d37;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #4b6b5c;
+  font-size: 0.97rem;
+}
+
 
