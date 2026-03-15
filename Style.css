@@ -4,7 +4,7 @@
 }
 
 .custom_navbar {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 30px auto;
     border-radius: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -891,4 +891,430 @@ body.loaded #preloader {
     font-size: 14px;
   }
 }
+/* other sports */
+.rafting-section {
+  padding: 60px 20px;
+  background: #f8f9fb;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main Container */
+.rafting-container {
+  max-width: 1200px;
+  width: 100%;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+/* LEFT CONTENT */
+.rafting-content {
+  padding: 40px 45px;
+}
+
+.rafting-badge {
+  background: #f3e3bd;
+  color: #a07606;
+  display: inline-block;
+  padding: 6px 15px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.rafting-title {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #242424;
+}
+
+.rafting-text {
+  color: #5a5a5a;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.rafting-features {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.rafting-features li {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.rafting-features li span {
+  color: #d0a339;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+/* Buttons */
+.rafting-buttons {
+  margin-top: 18px;
+}
+
+.btn-primary {
+  background: #d0a339;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #c2922f;
+}
+
+.btn-outline {
+  border: 2px solid #d0a339;
+  padding: 12px 24px;
+  border-radius: 10px;
+  margin-left: 12px;
+  color: #d0a339;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #d0a339;
+  color: #fff;
+}
+
+/* RIGHT IMAGE */
+.rafting-image-wrapper {
+  position: relative;
+}
+
+.rafting-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rafting-img-label {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.55);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .rafting-container {
+    grid-template-columns: 1fr;
+  }
+
+  .rafting-image-wrapper img {
+    height: 320px;
+  }
+}
+
+/* gem section */
+.gem-section {
+  background: #f7f5ef;
+  padding-top: 70px;
+}
+
+/* MAIN TITLE */
+.gem-main-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #1b1b1b;
+  background: linear-gradient(90deg, #d4af37, #8b6b1f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInDown 0.8s ease;
+}
+
+.gem-subtext {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #5a5a5a;
+  margin-top: 8px;
+  animation: fadeIn 1.2s ease;
+}
+
+/* IMAGE CARD */
+.gem-img-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: 0.5s ease;
+  border: 2px solid #d4af37;
+}
+
+.gem-img-card img {
+  transition: transform 0.6s ease;
+}
+
+.gem-img-card:hover img {
+  transform: scale(1.08);
+}
+
+/* OVERLAY TEXT */
+.gem-img-overlay {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: rgba(0,0,0,0.55);
+  padding: 15px 22px;
+  border-radius: 14px;
+  backdrop-filter: blur(4px);
+}
+
+.overlay-title {
+  margin: 0;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* RIGHT CONTENT CARD */
+.gem-info-card {
+  background: white;
+  border-radius: 18px;
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  transition: 0.4s ease;
+}
+
+.gem-info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(212, 175, 55, 0.35);
+}
+
+/* TEXT DESIGN */
+.gem-title {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #222;
+  background: linear-gradient(90deg, #d4af37, #b8860b);
+  -webkit-text-fill-color: transparent;
+}
+
+.gem-desc {
+  color: #3a3a3a;
+  font-size: 1.07rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* BUTTON */
+.gem-btn {
+  background: linear-gradient(135deg, #d4af37, #f8e473);
+  border: none;
+  font-weight: 600;
+  padding: 10px 26px;
+  border-radius: 40px;
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+  transition: 0.4s ease;
+  color: #000;
+}
+
+.gem-btn:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 0 8px 22px rgba(212, 175, 55, 0.6);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+/* gem card section */
+.gems-list-section {
+  background: #f7f5ef;
+}
+
+/* Heading */
+.gems-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #d4af37, #8b6b1f);
+  -webkit-text-fill-color: transparent;
+}
+
+.gems-subtext {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Gem Cards */
+.gem-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid #d4af37;
+  padding: 12px;
+  text-align: center;
+  transition: 0.4s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+}
+
+.gem-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.45);
+}
+
+/* Images */
+.gem-img {
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.gem-card:hover .gem-img {
+  transform: scale(1.07);
+}
+
+/* Gem Name Text */
+.gem-name {
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #333;
+}
+/* make transport page */
+.t-card:hover {
+  transform: translateY(-8px);
+  transition: 0.4s ease-in-out;
+}
+
+.t-img-wrap {
+  overflow: hidden;
+}
+
+.t-img-wrap img {
+  transition: transform 0.5s ease;
+}
+
+.t-card:hover .t-img-wrap img {
+  transform: scale(1.1);
+}
+
+.t-tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.t-btn {
+  transition: 0.3s;
+}
+
+.t-btn:hover {
+  opacity: 0.85;
+}
+ /* transport about  */
+.transport-creative-wave {
+  position: relative;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #c5f5d5, #7fd29c);
+}
+
+/* SVG Wave */
+.wave-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.wave-bg svg {
+  display: block;
+  width: 100%;
+  height: 150px;
+}
+
+/* Container above wave */
+.transport-creative-wave .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Titles */
+.creative-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #0c3d2d;
+  letter-spacing: 1px;
+}
+
+.creative-sub {
+  font-size: 1.15rem;
+  color: #14573e;
+  margin-top: 10px;
+}
+
+/* Overview Box */
+.creative-overview {
+  background: rgba(255,255,255,0.95);
+  padding: 35px;
+  border-radius: 22px;
+  max-width: 900px;
+  margin-bottom: 50px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  line-height: 1.9;
+  color: #2b4a3a;
+  backdrop-filter: blur(10px);
+}
+
+/* Feature Cards */
+.feature-card {
+  background: rgba(255,255,255,0.95);
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.feature-card h4 {
+  font-size: 1.25rem;
+  color: #0f4d37;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #4b6b5c;
+  font-size: 0.97rem;
+}
+
 
